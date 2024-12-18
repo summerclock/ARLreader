@@ -17,12 +17,13 @@ Either python3 or [`Anaconda3`](https://www.anaconda.com/distribution/) with the
 create a new virtual environment (here for anaconda)
 
 ```bash
-conda create -n ARLreader   # you can choose other names as well, 
-                            # but using the consistent name during the installation.
-activate ARLreader   # activate the virtual environement
+conda create -n arlreader -c conda-forge python=3.11
 
-conda install python=3.6   # install python, shipped with `pip`, `setuptools`...
-pip install git+https://github.com/martin-rdz/ARLreader.git
+conda activate arlreader
+
+conda install -c conda-forge altgraph atomicwrites attrs colorama Cython future importlib-metadata more-itertools numpy packaging pefile pluggy py pyparsing pytest six wcwidth zipp
+
+pip install git+https://github.com/summerclock/ARLreader.git
 ```
 
 ### Usage
